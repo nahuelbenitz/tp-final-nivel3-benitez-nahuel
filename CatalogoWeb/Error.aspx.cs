@@ -11,7 +11,8 @@ namespace CatalogoWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            string error = Session["error"].ToString();
+            lblError.Text = error;
         }
     }
 }

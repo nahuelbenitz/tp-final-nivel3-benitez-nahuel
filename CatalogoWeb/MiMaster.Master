@@ -24,14 +24,9 @@
                             <a class="nav-link active" aria-current="page" href="Default.aspx">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ListadoArticulo.aspx">Listado Articulo</a>
+                            <a class="nav-link active" href="ListadoArticulo.aspx">Listado Articulo</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Pricing</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                        </li>
+                        
                     </ul>
                 </div>
             </div>
