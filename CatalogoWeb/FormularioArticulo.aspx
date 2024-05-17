@@ -4,6 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+    <h1>Administrar producto</h1>
     <div class="row">
         <div class="col-6">
             <div class="mb-3">
@@ -32,7 +33,7 @@
             </div>
             <div class="mb-3">
                 <asp:Button Text="Agregar" ID="btnAgregar" CssClass="btn btn-primary" OnClick="btnAgregar_Click" runat="server" />
-                <a href="Default.aspx" class="btn btn-secondary">Cancelar</a>
+                <a href="ListadoArticulo.aspx" class="btn btn-secondary">Cancelar</a>
             </div>
         </div>
         <div class="col-6">
@@ -52,6 +53,25 @@
                 </ContentTemplate>
             </asp:UpdatePanel>
 
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <asp:UpdatePanel ID="UpdatePanel2" runat="server">
+                <ContentTemplate>
+                    <div class="mb-3">
+                        <asp:Button Text="Eliminar" ID="btnEliminar" CssClass="btn btn-danger" OnClick="btnEliminar_Click" runat="server" />
+                    </div>
+                    <%if (Confirma)
+                        {  %>
+                    <div class="mb-3">
+                        <asp:CheckBox Text="Confirmar Eliminación" ID="chkConfirmarEliminacion" runat="server" />
+                        <asp:Button Text="Eliminar" ID="btnConfirmaEliminar" CssClass="btn btn-outline-danger" OnClick="btnConfirmaEliminar_Click" runat="server" />
+                    </div>
+                    <%} %>
+                </ContentTemplate>
+            </asp:UpdatePanel>
         </div>
 
     </div>

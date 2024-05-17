@@ -182,14 +182,14 @@ namespace negocio
                         }
                         break;
                 }
-                
+
 
                 datos.setearConsulta(consulta);
                 datos.ejecutarLectura();
 
                 while (datos.Lector.Read())
                 {
-                      Articulo aux = new Articulo();
+                    Articulo aux = new Articulo();
                     aux.Id = (int)datos.Lector["Id"];
                     aux.Codigo = (string)datos.Lector["Codigo"];
                     aux.Nombre = (string)datos.Lector["Nombre"];
@@ -217,9 +217,9 @@ namespace negocio
 
         public void eliminar(int id)
         {
+            AccesoDatos datos = new AccesoDatos();
             try
             {
-                AccesoDatos datos = new AccesoDatos();
                 datos.setearConsulta("delete from articulos where id = @id");
                 datos.setearParametro("@id", id);
                 datos.ejecutarAccion();
