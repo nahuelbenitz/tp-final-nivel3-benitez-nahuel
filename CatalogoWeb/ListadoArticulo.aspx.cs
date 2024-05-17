@@ -30,6 +30,7 @@ namespace CatalogoWeb
 
         protected void dgvArticulos_PageIndexChanging(object sender, GridViewPageEventArgs e)
         {
+            dgvArticulos.DataSource = Session["listadoArticulo"];
             dgvArticulos.PageIndex = e.NewPageIndex;
             dgvArticulos.DataBind();
         }
