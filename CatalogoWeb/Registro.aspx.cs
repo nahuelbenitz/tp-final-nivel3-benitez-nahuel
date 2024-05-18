@@ -18,7 +18,7 @@ namespace CatalogoWeb
 
         }
 
-        protected async Task btnRegistrarse_Click(object sender, EventArgs e)
+        protected void btnRegistrarse_Click(object sender, EventArgs e)
         {
             try
             {
@@ -31,9 +31,9 @@ namespace CatalogoWeb
 
                 int id = negocio.insertarNuevo(user);
 
-                EmailService email = new EmailService(Environment.GetEnvironmentVariable("SENDGRID_API_KEY"));
+                EmailService email = new EmailService();
                 email.ArmarCorreo(user.Email,$"Bienvenido al Catalogo Web, {user.Nombre}!", "!Nos alegra que te hayas registrado! \nPronto te llegaran promociones exclusivas.");
-                await email.EnviarEmailAsync();
+                _ = email.EnviarEmailAsync();
                 Session.Add("nombre", user.Nombre.ToString());
 
                 Response.Redirect($"Bienvenida.aspx", false);

@@ -17,9 +17,9 @@ namespace negocio
     {
         private readonly SendGridClient _cliente;
         private SendGridMessage _mensaje;
-        public EmailService(string apiKey)
+        public EmailService()
         {
-            _cliente = new SendGridClient(apiKey);
+            _cliente = new SendGridClient(Environment.GetEnvironmentVariable("SENDGRID_API_KEY"));
         }
 
         public void ArmarCorreo(string emailDestino, string asunto, string cuerpo)
