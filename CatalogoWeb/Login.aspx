@@ -3,6 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <h1>Loguearse</h1>
     <div class="row">
         <div class="col-4"></div>
         <div class="col-4">
@@ -14,7 +15,7 @@
                 <label for="txtPassword" class="form-label">Password</label>
                 <asp:TextBox runat="server" ID="txtPassword" CssClass="form-control" TextMode="Password" />
             </div>
-            <asp:Button Text="Ingresar" runat="server" CssClass="btn btn-primary" ID="btnRegistrarse" />
+            <asp:Button Text="Ingresar" runat="server" CssClass="btn btn-primary" ID="btnIngresar" OnClick="btnIngresar_Click"  />
             <a href="/" class="btn btn-secondary">Cancelar</a>
             <div>
                 <a href="Registro.aspx">¿No tenes cuenta? Registrate.</a>

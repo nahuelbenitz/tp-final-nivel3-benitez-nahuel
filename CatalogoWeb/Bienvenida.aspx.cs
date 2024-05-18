@@ -13,7 +13,7 @@ namespace CatalogoWeb
         {
             string nombre = Session["nombre"].ToString();
 
-            lblMensaje.Text = $"Muchas gracias por registrarte {nombre}.<br /> Ya podes comenzar a disfrutar del catalogo. A la brevedad te estara llegando un mail, por favor revisar la bandeja de spam.";
+            lblMensaje.Text = $"Muchas gracias por registrarte, {nombre}.<br /> Ya podes comenzar a disfrutar del catalogo. A la brevedad te estara llegando un mail, por favor revisar la bandeja de spam.";
         }
     }
 }

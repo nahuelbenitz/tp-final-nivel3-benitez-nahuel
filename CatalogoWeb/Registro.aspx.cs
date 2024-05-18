@@ -29,10 +29,12 @@ namespace CatalogoWeb
                 user.Email = txtEmail.Text;
                 user.Pass = txtPassword.Text;
 
-                int id = negocio.insertarNuevo(user);
+                user.Id = negocio.insertarNuevo(user);
+
+                Session.Add("user", user);
 
                 EmailService email = new EmailService();
-                email.ArmarCorreo(user.Email,$"Bienvenido al Catalogo Web, {user.Nombre}!", "!Nos alegra que te hayas registrado! \nPronto te llegaran promociones exclusivas.");
+                email.ArmarCorreo(user.Email,$"Bienvenido al Catalogo Web, {user.Nombre}!", "¡Nos alegra que te hayas registrado! \nPronto te llegaran promociones exclusivas.");
                 _ = email.EnviarEmailAsync();
                 Session.Add("nombre", user.Nombre.ToString());
 

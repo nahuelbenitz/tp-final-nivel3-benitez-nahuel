@@ -13,6 +13,12 @@ namespace CatalogoWeb
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (!Seguridad.esAdmin(Session["user"]))
+            {
+                Session.Add("error", "Se requieren permisos de admin para acceder a esta pantalla.");
+                Response.Redirect("Error.aspx", false);
+            }
+
             if (!IsPostBack)
             {
                 ArticuloNegocio negocio = new ArticuloNegocio();
