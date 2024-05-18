@@ -31,7 +31,7 @@ namespace CatalogoWeb
 
                 int id = negocio.insertarNuevo(user);
 
-                EmailService email = new EmailService(ConfigurationManager.AppSettings["keyName"]);
+                EmailService email = new EmailService(Environment.GetEnvironmentVariable("SENDGRID_API_KEY"));
                 email.ArmarCorreo(user.Email,$"Bienvenido al Catalogo Web, {user.Nombre}!", "!Nos alegra que te hayas registrado! \nPronto te llegaran promociones exclusivas.");
                 await email.EnviarEmailAsync();
                 Session.Add("nombre", user.Nombre.ToString());
