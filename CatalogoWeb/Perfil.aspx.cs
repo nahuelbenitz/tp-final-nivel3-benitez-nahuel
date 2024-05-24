@@ -63,7 +63,7 @@ namespace CatalogoWeb
 
                 if (!string.IsNullOrEmpty(user.UrlImagen))
                     imgNuevoPerfil.ImageUrl = $"~/Images/{user.UrlImagen}";
-                lblGuardar.Text = "Se guardo correctamente";
+                lblGuardar.Text = "✅ Se guardo correctamente";
                 lblGuardar.CssClass = "text-success";
             }
             catch (Exception ex)

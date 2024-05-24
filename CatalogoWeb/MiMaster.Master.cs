@@ -31,6 +31,17 @@ namespace CatalogoWeb
                         imgAvatar.ImageUrl = $"~/Images/{user.UrlImagen}";
                 }
             }
+            if (Seguridad.sesionActiva(Session["user"]))
+            {
+                User user = (User)Session["user"];
+                if (!string.IsNullOrEmpty(user.Nombre))
+                    lblUser.Text = $"Hola, {user.Nombre}";
+                else
+                    lblUser.Text = $"Hola, {user.Email}";
+
+                if (!string.IsNullOrEmpty(user.UrlImagen))
+                    imgAvatar.ImageUrl = $"~/Images/{user.UrlImagen}";
+            }
         }
 
         protected void btnSalir_Click(object sender, EventArgs e)
