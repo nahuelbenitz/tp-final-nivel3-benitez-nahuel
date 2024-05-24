@@ -15,9 +15,12 @@
                 <label for="txtPassword" class="form-label">Password</label>
                 <asp:TextBox runat="server" ID="txtPassword" CssClass="form-control" TextMode="Password" />
             </div>
-            <asp:Button Text="Ingresar" runat="server" CssClass="btn btn-primary" ID="btnIngresar" OnClick="btnIngresar_Click"  />
-            <a href="/" class="btn btn-secondary">Cancelar</a>
-            <div>
+            <div class="mb-3 text-center">
+                <asp:Button Text="Ingresar" runat="server" CssClass="btn btn-primary" ID="btnIngresar" OnClick="btnIngresar_Click" />
+                <a href="/" class="btn btn-secondary">Cancelar</a>
+            </div>
+            <div class="mb-3 text-center">
+                <hr />
                 <a href="Registro.aspx">¿No tenes cuenta? Registrate.</a>
             </div>
         </div>

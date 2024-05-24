@@ -12,7 +12,7 @@
                 <div class="col">
                     <div class="card">
                         <img src="<%#Eval("UrlImagen") %>" class="card-img-top" alt="..." height="500px">
-                        <div class="card-body">
+                        <div class="card-body text-center">
                             <h5 class="card-title"><%#Eval("Nombre") %></h5>
                             <p class="card-text"><%#Eval("Descripcion") %></p>
                             <p class="card-text">$<%#Convert.ToDouble(Eval("Precio").ToString()).ToString("F2") %></p> <!-- Aca formateo a 2 decimales -->

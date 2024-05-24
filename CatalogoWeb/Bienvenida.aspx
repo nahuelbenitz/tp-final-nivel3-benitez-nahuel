@@ -14,6 +14,7 @@
     <div class="row">
         <div class="col-6">
             <div class="mb-3">
+                <a href="Perfil.aspx" class="btn btn-primary">Ir a tu Perfil</a>
                 <a href="/" class="btn btn-secondary">Ir al Home</a>
             </div>
         </div>

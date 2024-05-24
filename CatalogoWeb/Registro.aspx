@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MiMaster.Master" AutoEventWireup="true" CodeBehind="Registro.aspx.cs" Inherits="CatalogoWeb.Registro" Async="true"  %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MiMaster.Master" AutoEventWireup="true" CodeBehind="Registro.aspx.cs" Inherits="CatalogoWeb.Registro" Async="true" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -23,8 +23,10 @@
                 <label for="txtPassword" class="form-label">Password</label>
                 <asp:TextBox runat="server" ID="txtPassword" CssClass="form-control" TextMode="Password" />
             </div>
-            <asp:Button Text="Registrarse" runat="server" CssClass="btn btn-primary" ID="btnRegistrarse" OnClick="btnRegistrarse_Click" />
-            <a href="/" class="btn btn-secondary">Cancelar</a>
+            <div class="mb-3 text-center">
+                <asp:Button Text="Registrarse" runat="server" CssClass="btn btn-primary" ID="btnRegistrarse" OnClick="btnRegistrarse_Click" />
+                <a href="/" class="btn btn-secondary">Cancelar</a>
+            </div>
         </div>
         <div class="col-4"></div>
     </div>

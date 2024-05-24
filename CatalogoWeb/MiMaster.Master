@@ -26,7 +26,8 @@
                         <%if (negocio.Seguridad.sesionActiva(Session["user"])) // si hay una session, muestro opciones
                             {
                                 if (negocio.Seguridad.esAdmin(Session["user"])) //si es admin, muestro lista
-                                { %>%>
+                                { %>
+%>
                                     <li class="nav-item">
                                         <a class="nav-link active" href="ListadoArticulo.aspx">Listado Articulo</a>
                                     </li>
@@ -51,9 +52,9 @@
                         {
                     %>
                     <asp:Button Text="Salir" runat="server" ID="btnSalir" CssClass="btn btn-outline-primary me-2" OnClick="btnSalir_Click" />
+                    <asp:Label Text="" ID="lblUser" CssClass="text-light" runat="server" />
                     <%} %>
-                    <asp:Image ID="imgPerfil" Style="height: 40px; width: 40px; border-radius: 50%;"
-                        ImageUrl="imageurl"
+                    <asp:Image ID="imgAvatar" Style="height: 40px; width: 40px; border-radius: 50%;"
                         runat="server" />
                 </div>
             </div>
