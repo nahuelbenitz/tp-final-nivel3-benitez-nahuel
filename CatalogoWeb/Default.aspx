@@ -11,7 +11,7 @@
             <ItemTemplate>
                 <div class="col">
                     <div class="card">
-                        <img src="<%#Eval("UrlImagen") %>" class="card-img-top" alt="..." height="500px">
+                        <img src="<%#Eval("UrlImagen") %>" onerror="this.onerror=null; this.src='https://t4.ftcdn.net/jpg/05/17/53/57/360_F_517535712_q7f9QC9X6TQxWi6xYZZbMmw5cnLMr279.jpg'" class="card-img-top" alt="..." height="400px">
                         <div class="card-body text-center">
                             <h5 class="card-title"><%#Eval("Nombre") %></h5>
                             <p class="card-text"><%#Eval("Descripcion") %></p>

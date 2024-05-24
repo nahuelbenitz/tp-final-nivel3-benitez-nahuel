@@ -53,6 +53,7 @@ namespace CatalogoWeb
                     ddlCategoria.SelectedValue = seleccionado.Categoria.Id.ToString();
 
                     txtUrlImagen_TextChanged(sender, e);
+                    btnAgregar.Text = "Aceptar";
                 }
             }
             catch (Exception ex)
@@ -101,6 +102,7 @@ namespace CatalogoWeb
         protected void txtUrlImagen_TextChanged(object sender, EventArgs e)
         {
             imgArticulo.ImageUrl = txtUrlImagen.Text;
+
         }
 
         protected void btnEliminar_Click(object sender, EventArgs e)

@@ -57,12 +57,16 @@ namespace CatalogoWeb
                 negocio.actualizar(user);
 
                 //leer img
-                Image img = (Image)Master.FindControl("imgAvatar");
-                img.ImageUrl = $"~/Images/{user.UrlImagen}";
+                if (!string.IsNullOrEmpty(user.UrlImagen))
+                {
+                    Image img = (Image)Master.FindControl("imgAvatar");
+                    img.ImageUrl = $"~/Images/{user.UrlImagen}";
+                }
 
 
                 if (!string.IsNullOrEmpty(user.UrlImagen))
                     imgNuevoPerfil.ImageUrl = $"~/Images/{user.UrlImagen}";
+
                 lblGuardar.Text = "✅ Se guardo correctamente";
                 lblGuardar.CssClass = "text-success";
             }

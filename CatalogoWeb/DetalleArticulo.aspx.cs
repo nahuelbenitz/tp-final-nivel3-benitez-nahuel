@@ -22,7 +22,9 @@ namespace CatalogoWeb
             ddlMarca.Enabled = false;
             try
             {
-                if (!IsPostBack)
+                string id = Request.QueryString["id"] != null ? Request.QueryString["id"].ToString() : "";
+
+                if (id != "" && !IsPostBack)
                 {
                     MarcaNegocio marcaNegocio = new MarcaNegocio();
                     CategoriaNegocio categoriaNegocio = new CategoriaNegocio();
@@ -37,12 +39,7 @@ namespace CatalogoWeb
                     ddlCategoria.DataValueField = "Id";
                     ddlCategoria.DataTextField = "Descripcion";
                     ddlCategoria.DataBind();
-                }
-
-                string id = Request.QueryString["id"] != null ? Request.QueryString["id"].ToString() : "";
-
-                if (id != "" && !IsPostBack)
-                {
+                               
                     ArticuloNegocio negocio = new ArticuloNegocio();
                     Articulo seleccionado = (negocio.listar(id))[0];
 
@@ -67,7 +64,7 @@ namespace CatalogoWeb
 
         protected void txtUrlImagen_TextChanged(object sender, EventArgs e)
         {
-            imgArticulo.ImageUrl = txtUrlImagen.Text;
+            imgArticuloJs.Src = txtUrlImagen.Text;
         }
     }
 }

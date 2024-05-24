@@ -49,7 +49,7 @@
                             AutoPostBack="true" OnTextChanged="txtUrlImagen_TextChanged" />
                     </div>
                     <asp:Image ImageUrl="https://grupoact.com.ar/wp-content/uploads/2020/04/placeholder.png" runat="server"
-                        ID="imgArticulo" Width="60%" />
+                        ID="imgArticulo" Width="60%"  />
                 </ContentTemplate>
             </asp:UpdatePanel>
 

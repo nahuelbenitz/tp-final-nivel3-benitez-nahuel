@@ -43,8 +43,9 @@
                         <asp:TextBox runat="server" ID="txtUrlImagen" CssClass="form-control"
                             AutoPostBack="true" OnTextChanged="txtUrlImagen_TextChanged" />
                     </div>
-                    <asp:Image ImageUrl="https://grupoact.com.ar/wp-content/uploads/2020/04/placeholder.png" runat="server"
-                        ID="imgArticulo" Width="60%" />
+                    <img src="https://grupoact.com.ar/wp-content/uploads/2020/04/placeholder.png" alt="Imagen" runat="server" id="imgArticuloJs"
+                        onerror="this.onerror=null; this.src='https://t4.ftcdn.net/jpg/05/17/53/57/360_F_517535712_q7f9QC9X6TQxWi6xYZZbMmw5cnLMr279.jpg'" width="500" />
+
                 </ContentTemplate>
             </asp:UpdatePanel>
 

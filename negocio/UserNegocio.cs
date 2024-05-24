@@ -83,8 +83,8 @@ namespace negocio
             {
                 datos.setearConsulta("UPDATE USERS SET urlImagenPerfil = @imgPerfil, nombre = @nombre, apellido = @apellido WHERE id = @id");
                 datos.setearParametro("@imgPerfil", (object)user.UrlImagen ?? DBNull.Value);
-                datos.setearParametro("@nombre", user.Nombre);
-                datos.setearParametro("@apellido", user.Apellido);
+                datos.setearParametro("@nombre", string.IsNullOrEmpty(user.Nombre) ? (object)DBNull.Value : user.Nombre);
+                datos.setearParametro("@apellido", string.IsNullOrEmpty(user.Apellido) ? (object)DBNull.Value : user.Apellido);
                 datos.setearParametro("@id", user.Id);
                 datos.ejecutarAccion();
             }
