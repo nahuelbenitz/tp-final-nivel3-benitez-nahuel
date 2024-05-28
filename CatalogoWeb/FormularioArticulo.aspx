@@ -46,6 +46,7 @@
                 <asp:Button Text="Agregar" ID="btnAgregar" CssClass="btn btn-primary" OnClick="btnAgregar_Click" runat="server" />
                 <a href="ListadoArticulo.aspx" class="btn btn-secondary">Cancelar</a>
             </div>
+            <asp:Label Text="" ID="lblGuardar" runat="server" />
         </div>
         <div class="col-6">
             <div class="mb-3">

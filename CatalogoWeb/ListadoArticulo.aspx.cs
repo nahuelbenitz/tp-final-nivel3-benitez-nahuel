@@ -104,5 +104,13 @@ namespace CatalogoWeb
                 Response.Redirect("Error.aspx", false);
             }
         }
+
+        protected void btnLimpiar_Click(object sender, EventArgs e)
+        {
+            ddlCampo.SelectedIndex = 0;
+            ddlCampo_SelectedIndexChanged(sender, e);
+            dgvArticulos.DataSource = Session["listadoArticulo"];
+            dgvArticulos.DataBind();
+        }
     }
 }

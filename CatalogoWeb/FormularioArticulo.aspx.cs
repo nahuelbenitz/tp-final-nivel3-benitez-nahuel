@@ -90,11 +90,14 @@ namespace CatalogoWeb
                 {
                     nuevo.Id = int.Parse(txtId.Text);
                     negocio.modificar(nuevo);
+                    lblGuardar.Text = "✅ Se guardo correctamente";
+                    lblGuardar.CssClass = "text-success";
                 }
                 else
+                {
                     negocio.agregar(nuevo);
-
-                Response.Redirect("ListadoArticulo.aspx", false);
+                    Response.Redirect("ListadoArticulo.aspx", false);
+                }
             }
             catch (Exception ex)
             {
