@@ -22,6 +22,10 @@ namespace CatalogoWeb
         {
             try
             {
+                Page.Validate();
+                if (!Page.IsValid)
+                    return;
+
                 UserNegocio negocio = new UserNegocio();
                 User user = new User();
                 user.Nombre = txtNombre.Text;

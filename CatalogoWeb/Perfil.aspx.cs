@@ -40,6 +40,10 @@ namespace CatalogoWeb
         {
             try
             {
+                Page.Validate();
+                if (!Page.IsValid)
+                    return;
+
                 //escribir img
                 UserNegocio negocio = new UserNegocio();
                 User user = (User)Session["user"];
