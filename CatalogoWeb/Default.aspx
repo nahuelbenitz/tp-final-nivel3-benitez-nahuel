@@ -5,6 +5,7 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <h1>Hola!</h1>
     <p>Conoce nuestro catalogo de articulos</p>
+    <asp:Label Text="" ID="lblFavoritos" runat="server" />
     <div class="row row-cols-1 row-cols-md-3 g-4">
 
         <asp:Repeater ID="repRepetidor" runat="server">
@@ -17,6 +18,7 @@
                             <p class="card-text"><%#Eval("Descripcion") %></p>
                             <p class="card-text">$<%#Convert.ToDouble(Eval("Precio").ToString()).ToString("F2") %></p> <!-- Aca formateo a 2 decimales -->
                             <a href="DetalleArticulo.aspx?id=<%#Eval("Id") %>" class="btn btn-primary">Ver detalle</a>
+                            <asp:Button Text="🤍" CssClass="btn btn-danger" OnClick="" ID="btnAgregarFav" runat="server" />
                         </div>
                     </div>
                 </div>
